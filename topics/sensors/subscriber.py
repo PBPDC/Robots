@@ -34,7 +34,8 @@ class SensorSubscriber(Node):
 
     def imu_callback(self, msg):
         # Print IMU data
-        self.get_logger().info('IMU data (linear_acceleration): x_component:{} y_component:{} z_component:{}'.format(msg.linear_acceleration.x, msg.linear_acceleration.y, msg.linear_acceleration.z), throttle_du>        self.get_logger().info('IMU data (orientation): x_component:{} y_component:{} z_component:{}'.format(msg.orientation.x, msg.orientation.y, msg.orientation.z), throttle_duration_sec=3)
+        self.get_logger().info('IMU data (linear_acceleration): x_component:{} y_component:{} z_component:{}'.format(msg.linear_acceleration.x, msg.linear_acceleration.y, msg.linear_acceleration.z), throttle_duration_sec=2)        
+        self.get_logger().info('IMU data (orientation): x_component:{} y_component:{} z_component:{}'.format(msg.orientation.x, msg.orientation.y, msg.orientation.z), throttle_duration_sec=3)
         self.get_logger().info('IMU data (angular velocity): x_component:{} y_component:{} z_component:{}'.format(msg.angular_velocity.x, msg.angular_velocity.y, msg.angular_velocity.z), throttle_duration_sec=3)
 
     def scan_callback(self, msg):
